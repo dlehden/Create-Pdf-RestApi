@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <script type="text/javascript">
+       function openPdf()
+			{
+			var omyFrame = document.getElementById("myFrame");
+			omyFrame.style.display="_blank";
+
+			omyFrame.src = "http://localhost:8080/api/pdf/viewer";
+			}
+    </script>
+</head>
+<body>
+	<iframe id="myFrame" style="display:none" width="600" height="300"></iframe>
+
+	<input type="button" value="viewer" onclick = "openPdf()"/>
+	<br>
+
+	<a href ="http://localhost:8080/api/pdf/viewer" target="_blank"> 같은 탭에 창을 열기 </a>
+    <br>
+
+	<a href ="http://localhost:8080/api/pdf/viewer" onclick="window.open(this.href,'vv','witdh=800,height=800'); return false;">pdf 팝업창으로 열기 </a>
+
+</body>
+</html>
