@@ -36,7 +36,6 @@ public class CreatePdfFileApi {
 	@GetMapping("/linerbl")
 	public String createItextPdfFile() throws Exception {
 		String checkPdfData ="";
-		
 		for(int i=0 ; i < 3; i ++) {
 			 checkPdfData  = pdfMakeFile.pdfMakeFile("blno"+"_"+i);
 		}
